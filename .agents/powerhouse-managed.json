@@ -1,0 +1,12 @@
+{
+  "files": [
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "skills": [
+    "powerhouse-document-models",
+    "powerhouse-editors",
+    "powerhouse-processors-subgraphs",
+    "customize-connect"
+  ]
+}

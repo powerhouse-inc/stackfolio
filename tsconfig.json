@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    // paths for easy access to project modules
+    "paths": {
+      "document-models": ["./document-models/index.ts"],
+      "document-models/*": ["./document-models/*/index.ts"],
+      "editors": ["./editors/index.ts"],
+      "editors/*": ["./editors/*/index.ts"],
+      "pieces": ["./pieces/index.ts"],
+      "pieces/*": ["./pieces/*/index.ts"],
+      "processors/*": ["./processors/*/index.ts"],
+      "scalars": ["./scalars/index.ts"],
+      "scalars/*": ["./scalars/*/index.ts"],
+      "subgraphs": ["./subgraphs/index.ts"],
+      "subgraphs/*": ["./subgraphs/*/index.ts"],
+      // Connect's routes plus hosts/connect/routes/, once Vetra, a build or npm run tsc
+      // generates the tree; until then the imports fall back to core's own tree.
+      "@powerhousedao/connect-core/route-tree": ["./.ph/connect-routes.gen.ts"],
+      "@powerhousedao/connect/route-tree": ["./.ph/connect-routes.gen.ts"]
+    },
+    "module": "nodenext",
+    "moduleDetection": "force",
+    "target": "esnext",
+    "jsx": "react-jsx",
+    "types": ["node", "vitest/globals"],
+    "lib": ["ESNext", "dom", "dom.iterable"],
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "incremental": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true
+  },
+  // **/* skips dot folders, so of .ph only the route tree is checked: it types hosts/connect/routes/.
+  "include": [
+    "**/*",
+    "./powerhouse.manifest.json",
+    ".ph/connect-routes.gen.ts"
+  ],
+  // hosts/desktop/tauri-shell: the generated desktop shell, whose dist-stack/
+  // stages a copy of the project.
+  "exclude": [
+    "dist",
+    "node_modules",
+    "vitest.config.ts",
+    "main.tsx",
+    "hosts/desktop/tauri-shell"
+  ]
+}

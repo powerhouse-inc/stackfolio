@@ -1,0 +1,5 @@
+{
+  "permissions": {
+    "deny": ["Write(document-models/**/gen/**)", "Write(.ph/**)"]
+  }
+}

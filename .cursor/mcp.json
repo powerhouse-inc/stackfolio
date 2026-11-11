@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "reactor-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/node_modules/@powerhousedao/ph-cli/dist/cli.mjs",
+        "mcp",
+        "--project-dir",
+        "${workspaceFolder}"
+      ]
+    }
+  }
+}

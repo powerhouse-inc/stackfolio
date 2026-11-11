@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "reactor-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["--run", "mcp"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "context": {
+    "fileName": ["AGENTS.md", "GEMINI.md"]
+  },
+  "mcpServers": {
+    "reactor-mcp": {
+      "command": "node",
+      "args": ["--run", "mcp"]
+    }
+  }
+}
