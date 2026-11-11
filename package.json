@@ -1,7 +1,15 @@
 {
-  "name": "stackfolio",
+  "name": "@powerhousedao/stackfolio",
   "version": "1.0.0",
+  "description": "Stackfolio: a Powerhouse application with the uniform-runners host architecture.",
   "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/powerhouse-inc/stackfolio"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "/dist"
   ],
